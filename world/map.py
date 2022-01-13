@@ -6,5 +6,11 @@ class Map:
         self.dim_x = x
         self.dim_y = y
 
+        # setup map grid (x * y size) based on provided initial values
         self.map_cells = [[Cell() for r in range(self.dim_x)] for c in range(self.dim_y)]
-        print(self.map_cells[0][1].get_info())
+        
+    def show_map_contents(self):
+        for r in self.map_cells:
+            for c in r:
+                print(c.get_info())
+                c.show_cell_content()
