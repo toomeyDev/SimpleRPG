@@ -1,11 +1,12 @@
 import sys
 from time import sleep
-from utility import clear_screen
+from utility import clear_screen, exit_game
 """Handle menu operations, start, load, exit, settings."""
 class Menu:
     def __init__(self):
         self.options = ["Start", "Load", "Settings", "Exit"] # store options for the menu, start load etc
-        self.menu_loop()
+        self.menu_selection = -1
+        self.menu_loop() # execute main menu loop, should set menu selection to valid option (0 thru 2)
         
     def menu_loop(self):
         while(True):
@@ -18,19 +19,26 @@ class Menu:
                 if(ans in self.options):
                     if(ans == self.options[0]):
                         print("Starting Game...")
+                        self.menu_selection = 0
                         break
                     elif(ans == self.options[1]):
                         print("Loading Game...")
+                        self.menu_selection = 1
                         break
                     elif(ans == self.options[2]):
                         print("Settings...")
+                        self.menu_selection = 2
                         break
                     elif(ans) == self.options[3]:
                         print("Exiting...")
-                        sys.exit()
+                        exit_game()
                 else:
                     print("Invalid selection, please choose one of the available options.\n")
-                    sleep(3)
+                    sleep(2)
                     clear_screen()
                     continue
             break # exit menu flow after valid selection (start, load, settings etc)
+
+    def get_selection(self):
+        """Return the currently selected menu option."""
+        return self.menu_selection
