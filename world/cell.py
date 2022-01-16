@@ -1,3 +1,4 @@
+from character.enemy import Enemy
 """Module representing a single cell within a larger map entity."""
 class Cell:
     def __init__(self, x=0, y=0, description="An empty cell with nothing interesting present.."):
@@ -31,3 +32,7 @@ class Cell:
     def set_cell_description(self, description):
         """Set the description of this cell."""
         self.description = description
+
+    def add_test_enemy(self):
+        """Add an enemy with default values to a cell for testing."""
+        self.cell_content.append(Enemy())
