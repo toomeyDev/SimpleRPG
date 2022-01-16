@@ -18,19 +18,19 @@ class Menu:
                 ans=input().title()
                 if(ans in self.options):
                     if(ans == self.options[0]):
-                        print("Starting Game...")
+                        print("================================")
                         self.menu_selection = 0
                         break
                     elif(ans == self.options[1]):
-                        print("Loading Game...")
+                        print("================================")
                         self.menu_selection = 1
                         break
                     elif(ans == self.options[2]):
-                        print("Settings...")
+                        print("================================")
                         self.menu_selection = 2
                         break
                     elif(ans) == self.options[3]:
-                        print("Exiting...")
+                        print("================================")
                         exit_game()
                 else:
                     print("Invalid selection, please choose one of the available options.\n")

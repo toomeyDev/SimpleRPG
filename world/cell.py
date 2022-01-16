@@ -16,6 +16,11 @@ class Cell:
         output += self.description
         return output
 
+    def set_coordinates(self, x=0,y=0):
+        """Set the coordinates of this cell."""
+        self.x = x
+        self.y = y
+        
     def add_cell_content(self, content):
         """Add content to this cell."""
         self.cell_content.append(content)
