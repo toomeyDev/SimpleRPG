@@ -49,7 +49,7 @@ class Player(Character):
             self.location_x += 1
         elif(direction.lower() == "up"):
             print("Going up...\n")
-            self.location_y += 1
+            self.location_y -= 1
         elif(direction.lower() == "down"):
             print("Going down...\n")
-            self.location_y -= 1
+            self.location_y += 1

@@ -39,5 +39,9 @@ class Cell:
         self.description = description
 
     def add_test_enemy(self):
-        """Add an enemy with default values to a cell for testing."""
+        """Add an enemy with default values to this cell for testing."""
         self.cell_content.append(Enemy())
+
+    def add_enemy(self, name="Default", lvl=1, description="Default", hp=10, atk=1, exp=1, ASCII=":)"):
+        """Add an enemy with the specified values to this cell."""
+        self.cell_content.append(Enemy(name, lvl, description, atk, exp, ASCII))

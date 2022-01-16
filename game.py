@@ -17,6 +17,11 @@ def game_loop(start_arg=0):
             player.change_location("right")
             print(current_map.get_map_contents()[player.get_x_coord()][player.get_y_coord()].get_info())
             current_map.get_map_contents()[player.get_x_coord()][player.get_y_coord()].show_cell_content()
+            
+            # test enemy creation
+            player.change_location("down")
+            print(current_map.get_map_contents()[player.get_x_coord()][player.get_y_coord()].get_info())
+            current_map.get_map_contents()[player.get_x_coord()][player.get_y_coord()].show_cell_content()
             break
         # menu choice 'load' (to be completed)
         elif(start_arg == 1):
