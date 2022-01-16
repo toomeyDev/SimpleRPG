@@ -10,7 +10,7 @@ class Menu:
         
     def menu_loop(self):
         while(True):
-            print("Welcome to Simple RPG Alpha 0.02")
+            print("Welcome to Simple RPG Alpha 0.03")
             print("\n================================")
             while True:
                 print("Start\nLoad\nSettings\nExit\n")
