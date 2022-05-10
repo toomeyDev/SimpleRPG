@@ -20,8 +20,7 @@ class Map:
     def show_map_contents(self):
         for r in self.map_cells:
             for c in r:
-                print(c.get_info())
-                c.show_cell_content()
+                print("*")
 
     def set_map_cell(self, x, y, description, content):
         """Set the description and append content to the selected map cell."""

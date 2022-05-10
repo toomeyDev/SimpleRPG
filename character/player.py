@@ -53,3 +53,9 @@ class Player(Character):
         elif(direction.lower() == "down"):
             print("Going down...\n")
             self.location_y += 1
+
+    def take_turn(self):
+        super().take_turn()
+        print("Attack | Defend\n")
+        choice = input("Selection: ")
+        

@@ -1,0 +1,56 @@
+/create a 3x3 grid/
+MAPSIZE [3][3]
+/lines starting with '/' will be ignored
+
+/the 3x3 grid should have descriptions for each cell, otherwise fill with empty cells
+MAPCONTENTS
+/ for each tile, all content within the parenthesis will be used to construct the map cell /
+X[0]Y[0] (
+    desc="A dense forest, green trees and dirty dirt.",
+    "A single copper coin."
+    )
+
+X[0]Y[1] (
+    desc="Rocky cairns litter a shaded forest clearing, a stone pillar rises up towards the sky.",
+    "Cairns",
+    "Stone pillar",
+    "A broken sword."
+)
+
+X[0]Y[2] (
+    desc="The edge of the forest gives way to a 2000-ft tall rock wall. You will need rope to progress further this way.",
+    ENEMY=("Slime", 1, "A green, slimy slime.", 10, 1, 5, "(^-^)")
+)
+
+X[1]Y[0] (
+    desc ="A campsite sits abandoned amidst the trees, the smouldering remains of a fire still present.",
+    "Firepit",
+    "Wooden shoe [LEFT]"
+)
+
+X[1]Y[1] (
+    desc ="A group of ferocious RATWORMS blocks the way to a wooden chest.",
+    ENEMY=("Ratworm", "A vicious beast, half-worm and half-rat.", 15, 2, 10, "/--o{||}o--\"),
+    ENEMY=("Ratworm", "A vicious beast, half-worm and half-rat.", 15, 2, 10, "/--o{||}o--\"),
+    ENEMY=("Ratworm", "A vicious beast, half-worm and half-rat.", 15, 2, 10, "/--o{||}o--\"),
+    "Wooden chest"
+)
+
+X[1]Y[2] (
+    desc ="The ground here is covered in fallen pinecones, the smell of pine sap is thick in the air.",
+    "Pinecones",
+    "Pine sap"
+)
+
+X[2]Y[0] (
+    desc ="No trees grow here, a blackened sooty mess is all that remains of the trees.", 
+)
+
+X[2]Y[1] (
+    desc ="A stone tower sits atop a grassy hill, at the foot of the tower sits a massive vending machine.",
+    VENDOR=("Mysterious Vending Machine", "A vending machine full of snacks, weaponry and various sundries")
+)
+
+X[2]Y[2] (
+    desc ="There is nothing here, the earth abruptly falls off into a yawning abyss."
+)

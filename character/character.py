@@ -11,3 +11,7 @@ class Character:
         output += " description: "
         output += self.description
         return output
+
+    def take_turn(self):
+        """Execute turn during fight sequence."""
+        print(f"It's {self.name}'s turn!\n")

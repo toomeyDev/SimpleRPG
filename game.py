@@ -1,6 +1,7 @@
 from utility import clear_screen, exit_game
 from character.player import Player
 from world.map import Map
+
 """Handle main gameplay loop, tracking of player information, map movement, organize and utilize game assets."""
 def game_loop(start_arg=0):
     while True:
@@ -10,6 +11,7 @@ def game_loop(start_arg=0):
             player = player_setup() # prompt the user to setup a new character
             current_map = map_setup() # setup a map for the player
             print("You are in an area, what will you do?\n")
+            current_map.show_map_contents()
             print(current_map.get_map_contents()[player.get_x_coord()][player.get_y_coord()].get_info())
             current_map.get_map_contents()[player.get_x_coord()][player.get_y_coord()].show_cell_content()
             

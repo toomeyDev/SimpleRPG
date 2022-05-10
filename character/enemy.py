@@ -36,3 +36,9 @@ class Enemy(Character):
         output += "\nAttack power: "
         output += str(self.attack)
         return output
+
+    def take_turn(self):
+        super().take_turn()
+        print(f"{self.name} is attacking!")
+        print(f"Attack does {self.attack} damage!")
+        return self.attack
